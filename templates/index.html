@@ -1,38 +1,34 @@
 {% extends 'base.html' %} {% block body %}
+  
+    <h2>VTM Estimator</h2>
+    <hr />
+      </p>    
+    <form action="/" method ="POST">
+        <label for="tankRadius">
+          Tank Radius: 
+              <input type="text" name="radius" id="tankRadius" placeholder="radius in inches" autofocus required>
+        </label>
+      <p>  
 
-<h1>My List of Friends</h1>
-<hr />
-<h3>Be my friend:</h3>
-<form action="/add_friend" method="POST">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" autofocus required />
-  <br />
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname" />
-  <br />
-  <input type="submit" id="submit" value="I'll Be Your Friend" />
-  <input type="reset" value="Clear" />
-</form>
-<br />
-<br />
+      <p>
+        <label for="tankHeight">
+          Tank Height: 
+              <input type="text" name="height" id="tankHeight" placeholder="height in inches" required>
+        </label>
+      </p>  
 
-<hr />
-<br />
-{% if friends %}
-<h3>My Friends</h3>
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-    </tr>
-  </thead>
+        <input type="submit" value="Submit">
 
-  <tbody>
-    {% for friend in friends %}
-    <tr>
-      <td>{{ friend.name }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% endif %} {% endblock %}
+        <input type="reset" value="Clear">
+
+    </form>
+    {%if data%}
+    <p>
+        <h3>The estimated cost would be ${{data}} </h3>
+    </p>
+    {%endif%}
+
+
+ {%endblock%} 
+    
+    

@@ -1,4 +1,4 @@
-import time #pytest
+import pytest
 
 def test_home_route(app, client):
     """ 

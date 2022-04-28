@@ -1,3 +1,4 @@
+git config pull.rebase false
 name: test-package-deploy
 on:
   push:

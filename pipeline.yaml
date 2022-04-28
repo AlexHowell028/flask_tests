@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: package
     environment:
-      name: 'Production'
+      name: "Production"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -84,10 +84,10 @@ jobs:
           name: python-app
           path: .
           
-      - name: 'Deploy to Azure Web App'
+      - name: "Deploy to Azure Web App"
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'vtm-tank7'
-          slot-name: 'Production'
+          app-name: "vtm-tank7"
+          slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C5CD88701D00444E89841D01555FF4C1 }}

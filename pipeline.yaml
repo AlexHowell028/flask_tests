@@ -88,6 +88,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: "vtm-tank7"
+          app-name: "flask_test"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C5CD88701D00444E89841D01555FF4C1 }}
